@@ -5,7 +5,7 @@ import os
 from dotenv import load_dotenv
 import re
 
-# Carrega variáveis de ambiente
+# variáveis de ambiente
 load_dotenv()
 
 # Configuração do aplicativo
@@ -15,12 +15,12 @@ app.secret_key = os.getenv('FLASK_SECRET_KEY', 'uma-chave-secreta-padrao')
 # Proteção CSRF
 csrf = CSRFProtect(app)
 
-# Configuração do banco de dados
+#  banco de dados
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///contatos.db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
 
-# Modelo de Contato
+#  Contato
 class Contato(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     nome = db.Column(db.String(100), nullable=False)
