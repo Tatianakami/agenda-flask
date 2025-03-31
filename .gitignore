@@ -1,0 +1,53 @@
+# ======================================
+# 1. AMBIENTE VIRTUAL E VARIÁVEIS SENSÍVEIS
+# ======================================
+venv/          # Pasta do ambiente virtual Python
+.env           # Arquivo com variáveis secretas (como chaves API)
+
+# ======================================
+# 2. BANCO DE DADOS E ARQUIVOS DE INSTÂNCIA
+# ======================================
+instance/      # Pasta onde o SQLite armazena dados locais
+*.db           # Qualquer arquivo de banco de dados SQLite
+*.sqlite3
+
+# ======================================
+# 3. CACHE E ARQUIVOS TEMPORÁRIOS DO PYTHON
+# ======================================
+__pycache__/   # Pasta de cache Python
+*.pyc          # Bytecode compilado
+*.pyo
+*.pyd
+
+# ======================================
+# 4. ARQUIVOS DO SISTEMA/EDITOR
+# ======================================
+.DS_Store      # Arquivo de metadados do macOS
+Thumbs.db      # Arquivo de miniaturas do Windows
+.idea/         # Configurações do PyCharm/IntelliJ
+.vscode/       # Configurações do VS Code
+
+# ======================================
+# 5. LOGS E ARQUIVOS GERADOS EM RUNTIME
+# ======================================
+*.log          # Arquivos de log
+*.pot          # Arquivos de tradução
+*.mo
+
+# Ambiente Virtual
+venv/
+
+# Configurações sensíveis
+.env
+
+# Banco de dados local
+instance/
+
+# Cache do Python
+__pycache__/
+*.pyc
+
+# Arquivos de sistema
+.DS_Store
+Thumbs.db
+echo -e "\n# Banco de dados local\ninstance/\n\n# Variáveis de ambiente\n.env" >> .gitignore
