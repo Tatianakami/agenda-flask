@@ -3,7 +3,7 @@
 document.addEventListener('DOMContentLoaded', function() {
     console.log('Agenda de Contatos - JavaScript inicializado');
     
-    // 1. MELHORIA NA VALIDAÇÃO DO FORMULÁRIO (CLIENT-SIDE)
+    // FORMULÁRIO (CLIENT-SIDE)
     const form = document.querySelector('form');
     
     if (form) {
@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', function() {
             const telefoneInput = document.querySelector('input[name="telefone"]');
             const telefone = telefoneInput.value.trim();
             
-            // Validação do telefone (opcional no cliente)
+            // Validação do telefone
             if (!/^[\d\s-]{8,15}$/.test(telefone)) {
                 alert('Por favor, insira um telefone válido (8 a 15 dígitos, pode conter hífens ou espaços)');
                 telefoneInput.focus();
@@ -44,7 +44,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
     
     
-    // Observa mudanças na URL (para limpar campos quando um contato é adicionado)
+    // (para limpar campos quando um contato é adicionado)
     const observer = new MutationObserver(function(mutations) {
         if (window.location.search.includes('success')) {
             const nomeInput = document.querySelector('input[name="nome"]');
@@ -60,7 +60,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     observer.observe(document, {childList: true, subtree: true});
     
-    // 4. MASCARÁ PARA TELEFONE (OPCIONAL)
+    // 4. MASCARÁ PARA TELEFONE 
     const telefoneInput = document.querySelector('input[name="telefone"]');
     if (telefoneInput) {
         telefoneInput.addEventListener('input', function(e) {
