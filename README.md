@@ -6,7 +6,7 @@
 
 Um aplicativo web simples para gerenciar contatos, desenvolvido com Python e Flask.
 
-## 📸 Screenshots
+## 📸 
 ![Tela Principal](/assets/agendacontatos.png)  
 *Interface principal da aplicação*
 
